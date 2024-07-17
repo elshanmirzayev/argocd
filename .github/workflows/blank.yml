@@ -43,5 +43,6 @@ jobs:
       - name: install 
         run: |
           helm install argo-cd charts/argo-cd/ \
-          --set server.service.type=LoadBalancer    
+          --set service.type=LoadBalancer \
+          --namespace argocd --create-namespace    
 
